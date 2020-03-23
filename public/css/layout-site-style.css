@@ -1,0 +1,545 @@
+body {
+    font-family: Roboto, sans-serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* header */
+header {
+    background: #00bfff;
+    margin-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}
+
+header nav ul {
+    display: flex;
+    margin-top: 1em;
+    max-width: 960px;
+    margin: 1em auto;
+    margin-bottom: 0;
+    border-top: 1px solid white;
+    padding-top: 1em;
+}
+
+header nav ul li {
+    margin-left: 1em;
+    text-transform: capitalize;
+}
+
+header nav ul li:last-child {
+    padding-left: 2em;
+    border-left: 1px solid white;
+}
+
+header nav ul li:hover {
+    text-decoration: underline;
+}
+
+header div a:hover {
+    font-style: italic;
+    font-weight: bold;
+}
+
+header div {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+/* main */
+
+main {
+    margin: 0 13%;
+}
+
+/* product-list */
+
+.product-list h2 {
+    font-family: 'Roboto Condensed', serif;
+    text-transform: uppercase;
+    background: #0198E1;
+    color: white;
+    padding: 0.6em;
+    padding-left: 2em;
+}
+
+.product-list ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin-top: 1em;
+    grid-gap: 1em;
+}
+
+.product-list ul li img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product-list ul li:hover {
+    box-shadow: 0 5px 5px 1px gainsboro;
+}
+
+.product-list ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid gainsboro;
+    border-radius: 6px;
+}
+
+
+.product-list ul li h3 {
+    text-transform: capitalize;
+    margin-top: .6em;
+    margin-left: .6em;
+    margin-bottom: .4em;
+    font-weight: normal;
+}
+.product-list ul li h3:hover {
+    color: #0D4F8B;
+}
+
+.product-list ul li p {
+    font-size: 1.1em;
+    color: red;
+    margin-left: .6em;
+    margin-bottom: .4em;
+    font-weight: bold;
+}
+
+.product-list .buy {
+    display: block;
+    text-align: center;
+    padding: .6em .4em;
+    background: #0D4F8B;
+    border-radius: 5px;
+    color: white
+}
+
+.product-list .buy:hover {
+    background: #00bfff;
+}
+
+/* table */
+
+table {
+    border-collapse: collapse;
+    border: 3px solid blue;
+    margin-left: 1em;
+}
+
+th,
+td {
+    padding: 20px;
+    border: 1px solid cornflowerblue;
+}
+
+table caption {
+    font-size: 1.6em;
+    font-family: 'Roboto Slab', serif;
+}
+
+table caption a {
+    font-size: .6em;
+    font-family: Roboto, sans-serif;
+    border: 2px solid blue;
+    color: blue;
+    margin-left: 1em;
+}
+
+table caption a:hover {
+    background: blue;
+    color: white;
+}
+
+table #btn-delete {
+    border: 2px solid red;
+    color: red;
+    background: white;
+}
+
+table #btn-delete:hover {
+    background: red;
+    color: white;
+}
+
+th input {
+    width: .8em;
+    height: .8em;
+}
+
+thead th input {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+thead {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+}
+
+tbody td {
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background: #F0F8FF;
+}
+
+tbody tr:hover {
+    background: #99FFFF;
+}
+
+/* Form style */
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 1.1em;
+}
+
+button {
+    padding: .2em .6em;
+    background: white;
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+textarea {
+    vertical-align: top;
+}
+
+form a,
+table caption a {
+    padding: .2em .6em;
+    padding-top: .35em;
+    font-size: 1.1em;
+    transition-duration: .2s;
+}
+
+form>div {
+    margin-bottom: 1em;
+}
+
+form>div>label {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+    margin-right: 1em;
+    font-family: 'Roboto Condensed', serif;
+}
+
+form>div>div {
+    display: inline-block;
+}
+
+form>div>div>label {
+    margin-right: 1em;
+    font-size: 1.1em;
+}
+
+form>div>div>label>input {
+    width: 0.9em;
+    height: 0.9em;
+    margin-right: 0.25em;
+}
+
+/* product-detail */
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3em;
+}
+
+.product-detail img {
+    margin: 0 auto;
+    height: 310px;
+    border-radius: 20px;
+    max-width: 450px;
+}
+
+.product-detail ul h3 {
+    font-family: 'Roboto Condensed', serif;
+    letter-spacing: 1px;
+    font-size: 2em;
+    color: rgb(102, 102, 102);
+    font-weight: normal;
+    padding-bottom: .3em;
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: .6em;
+    display: flex;
+}
+
+.product-detail ul h3 span {
+    text-transform: capitalize;
+}
+
+.product-detail ul>* {
+    margin-top: 1rem;
+}
+
+.product-detail ul li {
+    margin-left: 2em;
+    font-size: 1.2em;
+}
+
+.product-detail ul li:first-of-type span {
+    padding: .4em 1em;
+    background: blue;
+    color: white;
+    font-size: 1rem;
+    margin-left: auto;
+    align-self: baseline;
+}
+
+.product-detail ul li:first-of-type {
+    color: gray;
+}
+
+.product-detail ul p {
+    margin-left: 2em;
+    font-size: 1.2em;
+}
+
+.product-detail ul p span {
+    margin-left: 1em;
+    font-size: .8em;
+    padding-bottom: 5px;
+    border-bottom: 1px solid pink;
+    line-height: 30px;
+}
+
+/* Forms */
+.login h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.4em;
+}
+
+.login form {
+    margin-left: 2em;
+    margin-top: 1em;
+}
+
+.login form div label {
+    display: inline-block;
+    width: 150px;
+}
+
+.login form input {
+    border: 1px solid black;
+    padding: .2em .6em;
+    margin-bottom: .6em;
+    font-size: 1em;
+}
+
+.login form input[type="checkbox"] {
+    width: 1.1em;
+    height: 1.1em;
+}
+
+.login form p label {
+    cursor: pointer;
+    margin-left: 150px;
+}
+
+.login form p a {
+    margin-left: 150px;
+    color: blue;
+    text-decoration: underline;
+}
+
+.login form p button {
+    margin-top: 1.6em;
+    margin-left: 150px;
+    padding: .4em 1em;
+    border: 2px solid black;
+    background: white;
+    font-size: .9em;
+}
+
+.login form p button:hover {
+    color: white;
+    background: #0198E1;
+    cursor: pointer;
+}
+
+.error {
+    margin-top: 1em;
+    margin-left: 150px;
+    color: red;
+}
+
+.main-view .login {
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1.6em 2em;
+}
+
+.main-view .login h5 {
+    margin-top: .6em;
+    font-size: large;
+}
+
+.login-info h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.4em;
+}
+
+.login-info>div {
+    display: flex;
+    margin-top: 2em;
+    margin-right: 1em;
+}
+
+.login-info img {
+    width: 160px;
+    height: 160px;
+    margin-right: 2em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+.login-info>div div p:first-child {
+    font-size: 1.2em;
+    margin-bottom: .8em;
+}
+
+.login-info>div div p:last-child {
+    margin-top: 1em;
+    color: blue;
+}
+
+.login-info>div div p {
+    line-height: 1.6em
+}
+
+.login-info>div div p a:hover {
+    color: #0D4F8B;
+}
+
+.sign-up {
+    margin-left: 25%;
+    margin-right: 15%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1.6em 2em;
+}
+
+.sign-up h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.4em;
+}
+
+.sign-up form {
+    margin-top: 1em;
+    margin-left: 2em;
+}
+
+.sign-up form div label {
+    display: inline-block;
+    width: 250px;
+}
+
+.sign-up form div input {
+    border: 1px solid black;
+    padding: .2em .6em;
+    margin-bottom: .6em;
+    font-size: 1em;
+}
+
+.sign-up form div input[type="file"] {
+    border: none;
+    font-size: .9em;
+}
+
+.sign-up form input:read-only {
+    cursor: not-allowed;
+}
+
+
+.sign-up form .other-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2em;
+    grid-gap: 1.4em
+}
+
+.sign-up form .other-info input {
+    display: block;
+    margin-top: .4em;
+}
+
+.sign-up form .other-info img {
+    width: 180px;
+}
+
+.sign-up form button {
+    margin-left: 3em;
+    padding: .4em 1em;
+    border: 2px solid black;
+    background: white;
+    font-size: .9em;
+}
+
+.sign-up form button:hover {
+    color: white;
+    background: #0198E1;
+    cursor: pointer;
+}
+
+.main-view .sign-up h5 {
+    margin-top: .6em;
+    color: black;
+    font-size: large;
+}
+
+/* Checkout */
+.checkout {
+    width: max-content;
+    margin: 0 auto;
+}
+.checkout h2{
+    margin-top: 2em;
+    font-family: 'Roboto Slab', serif;
+    margin-bottom: 1em;
+}
+.checkout button {
+    border: 2px solid blue;
+    margin-top: 1em;
+    margin-left: 5em;
+    color: blue;
+}
+form button:hover {
+    background: blue;
+    color: white;
+}
+
+
+/* footer */
+footer {
+    margin-top: 5em;
+}
+
+footer p {
+    text-align: center;
+    padding: 1.6em;
+    background: #0198E1;
+    color: white;
+    font-family: 'Roboto Condensed', serif;
+}

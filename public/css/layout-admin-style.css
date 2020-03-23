@@ -1,0 +1,340 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
+/* Side nav */
+h1 {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: .6em;
+    letter-spacing: 4px;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 20vw auto;
+}
+
+.sidebar {
+    position: fixed;
+    width: 20vw;
+    height: 100vh;
+    background: #000058;
+    color: white;
+}
+
+.sidebar nav img {
+    width: 64px;
+}
+
+.sidebar nav {
+    margin-top: 1em;
+}
+
+.sidebar nav ul li {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar nav ul li:hover {
+    background: yellow;
+    color: #000058;
+}
+
+.sidebar nav ul li>* {
+    margin-left: .6em;
+}
+
+.sidebar p {
+    text-align: center;
+    font-size: large;
+    margin-bottom: .6em;
+}
+
+/* Main */
+
+.main {
+    margin-left: 2em;
+    grid-column-start: 2;
+    margin-bottom: 5em;
+}
+
+main h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2em;
+    margin-top: 1.2em;
+    margin-bottom: 1.6em;
+    text-align: left;
+}
+
+main h2::before {
+    content: '》';
+}
+
+main h5 {
+    display: block;
+    position: absolute;
+    right: 200px;
+    top: 100px;
+    background: black;
+    color: white;
+    padding: .4em .8em;
+    font-size: 1.2em;
+    animation-duration: .8s;
+    animation-name: slidein;
+}
+
+main ul {
+    font-size: larger;
+    margin-left: 3em;
+}
+
+main ul li span {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Roboto Slab';
+}
+
+main ul li span::before {
+    content: '___';
+    font-weight: initial;
+    font-size: initial;
+}
+
+@keyframes slidein {
+    from {
+        opacity: 0;
+        right: 50px;
+        color: black;
+    }
+
+    to {
+        opacity: 1;
+        display: inline-block;
+        right: 200px;
+        color: white;
+    }
+}
+
+/* Form style */
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 1.1em;
+}
+
+button {
+    padding: .2em .6em;
+    background: white;
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+textarea {
+    vertical-align: top;
+}
+
+table a,
+table caption a {
+    padding: .2em .6em;
+    padding-top: .35em;
+    font-size: 1.1em;
+    transition-duration: .2s;
+}
+
+/* add, edit */
+
+form>div {
+    margin-bottom: 1em;
+}
+
+form>div>label {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+    margin-right: 1em;
+    font-family: 'Roboto Condensed', serif;
+}
+
+form>div>div {
+    display: inline-block;
+}
+
+form>div>div>label {
+    margin-right: 1em;
+    font-size: 1.1em;
+}
+
+form>div>div>label>input {
+    width: 0.9em;
+    height: 0.9em;
+    margin-right: 0.25em;
+}
+
+form .functions {
+    margin-top: 2em;
+    margin-left: 210px;
+    width: max-content;
+    border-top: 1px solid gray;
+    padding-top: 1em;
+    padding-bottom: 7em;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+form .functions button:first-of-type {
+    border: 2px solid blue;
+    color: blue;
+}
+
+form .functions button:first-of-type:hover {
+    background: blue;
+    color: white;
+}
+
+form .functions button:nth-of-type(2) {
+    border: 2px solid red;
+    color: red;
+}
+
+form .functions button:nth-of-type(2):hover {
+    background: red;
+    color: white;
+}
+
+form .functions a {
+    border: 2px solid green;
+    color: green;
+    padding: 0.4em 0.6em;
+}
+
+form .functions a:hover {
+    background: green;
+    color: white;
+}
+
+form .functions a:nth-of-type(2) {
+    border: 2px solid violet;
+    color: violet;
+}
+
+form .functions a:nth-of-type(2):hover {
+    background: violet;
+    color: white;
+}
+
+form .functions a:first-of-type {
+    margin-left: 3em;
+}
+
+/* list.php table style*/
+table {
+    border-collapse: collapse;
+    border: 3px solid blue;
+    margin-left: 1em;
+}
+
+th,
+td {
+    padding: 20px;
+    border: 1px solid cornflowerblue;
+}
+
+table caption {
+    font-size: 1.6em;
+    font-family: 'Roboto Slab', serif;
+}
+
+table caption a {
+    font-size: .6em;
+    font-family: Roboto, sans-serif;
+    border: 2px solid blue;
+    color: blue;
+    margin-left: 1em;
+}
+
+table caption a:hover {
+    background: blue;
+    color: white;
+}
+
+table #btn-delete {
+    border: 2px solid red;
+    color: red;
+    background: white;
+}
+
+table #btn-delete:hover {
+    background: red;
+    color: white;
+}
+
+th input {
+    width: .8em;
+    height: .8em;
+}
+
+thead th input {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+thead {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+}
+
+tbody td {
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background: #F0F8FF;
+}
+
+tbody tr:hover {
+    background: #99FFFF;
+}
+
+/* Pagination */
+
+.pagination {
+    margin-top: 2em;
+    margin-left: 3em;
+    color: blue;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+.pagination li a {
+    margin-right: 1em;
+    border: 2px solid blue;
+    padding: .2em .6em;
+}
+
+.pagination li a:hover {
+    color: white;
+    background: blue;
+    cursor: pointer;
+}
+
+.pagination li:nth-child(2) a::before {
+    content: "◀ ";
+}
+
+.pagination li:nth-child(3) a::after {
+    content: " ▶";
+}
+
+li.disabled a:hover {
+    cursor: not-allowed;
+}

@@ -1,0 +1,29 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab&display=swap&subset=vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap&subset=vietnamese');
+
+/* Common CSS reset */
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  line-height: 1.75;
+}
